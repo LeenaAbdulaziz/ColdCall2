@@ -22,9 +22,27 @@ class ViewController: UIViewController {
    
     @IBAction func OnCallPressed(_ sender: UIButton) {
         
+        nameLabel.text=list.randomElement()
+        
+        ChanedColor()
+       
+    }
+    
+         
+       
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        nameLabel.text="Ready?"
+    }
+    
+    func ChanedColor(){
+
         var randomName = Int.random(in: 1...5)
        
-        nameLabel.text=list.randomElement()
+        
         numberLabel.text=String(randomName)
         
         
@@ -52,17 +70,10 @@ class ViewController: UIViewController {
                 }
        
         
-       
+        
     }
     
-         
-       
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        nameLabel.text="Ready?"
-    }
-    
+
 }
